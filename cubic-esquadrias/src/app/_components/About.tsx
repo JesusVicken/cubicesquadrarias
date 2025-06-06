@@ -23,7 +23,8 @@ export function About() {
                             />
                         </div>
 
-                        <div className="absolute w-40 h-40 left-12 -bottom-8 rounded-lg overflow-hidden">
+                        <div className="absolute lg:left-12 lg:-bottom-8 left-1/5 bottom-20 transform -translate-x-1/2 lg:translate-x-0 w-24 h-24 lg:w-40 lg:h-40 rounded-lg overflow-hidden">
+
                             <Image
                                 src="/logo1.svg"
                                 alt="Logo Cubic"
