@@ -1,11 +1,12 @@
+import Header from "./_components/header"
 
 
 export default function Home() {
   return (
 
     <main>
-      <h1>PAGINA TESTE</h1>
-      
+      <Header />
+
     </main>
   )
 }
