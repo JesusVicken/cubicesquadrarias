@@ -69,7 +69,7 @@ export function About() {
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                href="https://wa.me/5561981778422?text=Olá, vim pelo site e gostaria de mais informações sobre os serviços da Cubic Esquadrias."
+                                href="https://wa.me/5561994258350?text=Olá, vim pelo site e gostaria de mais informações sobre os serviços da Cubic Esquadrias."
                                 className="bg-green-600 hover:bg-green-700 text-white flex items-center gap-2 px-4 py-2 rounded-md transition-colors"
                             >
                                 <WhatsappLogoIcon className="w-5 h-5" />

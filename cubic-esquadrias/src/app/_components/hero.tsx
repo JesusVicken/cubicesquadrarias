@@ -33,7 +33,7 @@ export default function Hero() {
                         Projetos personalizados e instalações profissionais para seu projeto
                     </p>
                     <a
-                        href="https://wa.me/5561981778422?text=Olá, vim pelo site e gostaria de solicitar um orçamento."
+                        href="https://wa.me/5561994258350?text=Olá, vim pelo site e gostaria de solicitar um orçamento."
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mt-6 inline-flex items-center gap-2 px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-md transition-colors"
