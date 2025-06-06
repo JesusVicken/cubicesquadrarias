@@ -10,18 +10,20 @@ export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="w-full bg-background/90 backdrop-blur sticky top-0 z-50">
-            <div className="max-w-7xl mx-auto px-4 md:px-6 py-0 flex items-center justify-between min-h-[20px] relative overflow-visible">
-                {/* Logo */}
-                <Link href="/" className="flex items-center">
-                    <Image
-                        src="/logobran.png"
-                        alt="Logo"
-                        width={600}
-                        height={200}
-                        className="h-32 w-auto -mt-7"
-                        priority
-                    />
+        <header className="w-full h-[72px] bg-background/90 backdrop-blur sticky top-0 z-50 overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between h-full">
+                {/* Logo com recorte e centralização */}
+                <Link href="/" className="flex items-center h-full overflow-hidden">
+                    <div className="flex items-center h-full">
+                        <Image
+                            src="/logobran.png"
+                            alt="Logo"
+                            width={600}
+                            height={200}
+                            className="h-32 w-auto object-contain"
+                            priority
+                        />
+                    </div>
                 </Link>
 
                 {/* Navegação Desktop */}
@@ -44,7 +46,7 @@ export default function Header() {
                 </nav>
 
                 {/* Ícone do Menu Mobile */}
-                <div className="md:hidden flex items-center gap-2 -mt-3">
+                <div className="md:hidden flex items-center gap-2">
                     <Button
                         variant="ghost"
                         size="icon"
@@ -54,7 +56,6 @@ export default function Header() {
                         {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                     </Button>
                 </div>
-
             </div>
 
             {/* Menu Mobile */}
