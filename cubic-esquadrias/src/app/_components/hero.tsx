@@ -9,7 +9,7 @@ export default function Hero() {
             {/* Imagem de fundo - agora com max-h e object-position ajustado */}
             <div className="absolute inset-0 w-full h-full overflow-hidden">
                 <Image
-                    src="/hero.jpg"
+                    src="/Hero.jpg"
                     alt="Imagem de fundo"
                     fill
                     className="object-cover object-center"
