@@ -14,6 +14,7 @@ export default function Hero() {
                     fill
                     className="object-cover object-center"
                     priority
+                    quality={100}
                 />
             </div>
 
