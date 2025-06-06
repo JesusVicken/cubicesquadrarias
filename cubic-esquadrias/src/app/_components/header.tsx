@@ -44,7 +44,7 @@ export default function Header() {
                 </nav>
 
                 {/* Ícone do Menu Mobile */}
-                <div className="md:hidden flex items-center gap-2">
+                <div className="md:hidden flex items-center gap-2 -mt-3">
                     <Button
                         variant="ghost"
                         size="icon"
@@ -54,6 +54,7 @@ export default function Header() {
                         {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                     </Button>
                 </div>
+
             </div>
 
             {/* Menu Mobile */}
