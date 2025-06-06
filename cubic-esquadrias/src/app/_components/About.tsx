@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { Check, MapPin } from "lucide-react"
 import { WhatsappLogoIcon } from "@phosphor-icons/react/dist/ssr"
+import Link from "next/link"
 
 export function About() {
     return (
@@ -76,15 +77,13 @@ export function About() {
                                 Contato via WhatsApp
                             </a>
 
-                            {/* <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="https://maps.google.com/?q=Cubic Esquadrias"
+                            <Link
+                                href="/sobre"
                                 className="flex items-center gap-2 px-4 py-2 border border-gray-400 rounded-md hover:bg-gray-100 transition"
                             >
                                 <MapPin className="w-5 h-5 text-gray-800" />
-                                Localização
-                            </a> */}
+                                Saiba mais
+                            </Link>
                         </div>
                     </div>
 
