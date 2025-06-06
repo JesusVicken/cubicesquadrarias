@@ -10,7 +10,7 @@ export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="w-full h-[72px] bg-background/90 backdrop-blur sticky top-0 z-50 overflow-visible">
+        <header className="w-full h-[72px] bg-white shadow-md sticky top-0 z-50 overflow-visible backdrop-blur">
             <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between h-full">
                 {/* Logo com recorte e centralização */}
                 <Link href="/" className="flex items-center h-full overflow-hidden">
