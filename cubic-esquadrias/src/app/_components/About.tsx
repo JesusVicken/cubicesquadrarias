@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export function About() {
     return (
-        <section className="bg-[#FDF6ec] py-16">
+        <section className="bg-white py-16">
             <div className="container px-4 mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -25,7 +25,6 @@ export function About() {
                         </div>
 
                         <div className="absolute lg:left-12 lg:-bottom-8 left-1/5 bottom-20 transform -translate-x-1/2 lg:translate-x-0 w-24 h-24 lg:w-40 lg:h-40 rounded-lg overflow-hidden">
-
                             <Image
                                 src="/logo1.svg"
                                 alt="Logo Cubic"
