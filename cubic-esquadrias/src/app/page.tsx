@@ -1,7 +1,8 @@
 
 import { About } from "./_components/About";
 import Hero from "./_components/hero";
-import ServicosCarousel from "./_components/ServiceCarroussel";
+import Segments from "./_components/segments";
+import ServicosCards from "./_components/ServicosCards";
 
 
 
@@ -11,8 +12,8 @@ export default function Home() {
     <main>
       <Hero />
       <About />
-      <ServicosCarousel />
-
+      <ServicosCards />
+      <Segments />
     </main>
   )
 }
