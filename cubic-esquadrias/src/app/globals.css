@@ -121,27 +121,125 @@
   }
 }
 
-
 @keyframes border-draw {
   0% {
-    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    width: 0%;
+    height: 2px;
+    top: 0;
+    left: 0;
   }
   25% {
-    clip-path: polygon(0 0, 100% 0, 0 0, 0 0);
+    width: 100%;
+    height: 2px;
+    top: 0;
+    left: 0;
   }
   50% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
+    width: 2px;
+    height: 100%;
+    top: 0;
+    right: 0;
   }
   75% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    right: 0;
+    left: 0;
   }
   100% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    width: 2px;
+    height: 100%;
+    bottom: 0;
+    left: 0;
   }
 }
 
-@layer utilities {
-  .animate-border-draw {
-    animation: border-draw 1s forwards;
+/* Container para as bordas */
+.border-anim {
+  position: relative;
+  overflow: visible;
+}
+
+.border-anim::before,
+.border-anim::after {
+  content: "";
+  position: absolute;
+  border: 2px solid #22c55e; /* verde Tailwind green-500 */
+  border-radius: 0.5rem; /* mesmo que rounded-xl */
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Linhas horizontais */
+.border-anim::before {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  animation-fill-mode: forwards;
+}
+
+/* Linhas verticais */
+.border-anim::after {
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 0;
+  animation-fill-mode: forwards;
+}
+
+.border-anim:hover::before,
+.border-anim:focus-within::before,
+.border-anim:hover::after,
+.border-anim:focus-within::after {
+  opacity: 1;
+  animation: border-draw 1s forwards;
+}
+
+.border-animated {
+  position: relative;
+  border-radius: 0.75rem; /* arredondado do card (exemplo: rounded-xl) */
+  overflow: hidden;
+}
+
+.border-animated::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  border: 2px solid transparent;
+  background:
+    linear-gradient(90deg, #22c55e 50%, transparent 50%) top left / 200% 2px no-repeat,
+    linear-gradient(0deg, #22c55e 50%, transparent 50%) bottom right / 2px 200% no-repeat,
+    linear-gradient(90deg, transparent 50%, #22c55e 50%) bottom right / 200% 2px no-repeat,
+    linear-gradient(0deg, transparent 50%, #22c55e 50%) top left / 2px 200% no-repeat;
+  background-size: 0% 2px, 2px 0%, 0% 2px, 2px 0%;
+  animation: border-grow 1s forwards;
+  animation-play-state: paused;
+}
+
+.border-animated:hover::before,
+.border-animated:focus-within::before {
+  animation-play-state: running;
+}
+
+@keyframes border-grow {
+  0% {
+    background-size: 0% 2px, 2px 0%, 0% 2px, 2px 0%;
+  }
+  25% {
+    background-size: 100% 2px, 2px 0%, 0% 2px, 2px 0%;
+  }
+  50% {
+    background-size: 100% 2px, 2px 100%, 0% 2px, 2px 0%;
+  }
+  75% {
+    background-size: 100% 2px, 2px 100%, 100% 2px, 2px 0%;
+  }
+  100% {
+    background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
   }
 }
