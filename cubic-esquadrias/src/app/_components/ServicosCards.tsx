@@ -1,20 +1,25 @@
 'use client'
 
-import { ReactNode } from "react"
+import { ReactNode, useEffect } from "react"
 import { Building2, SquareStack, Layers } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 interface CardServicoProps {
     icon: ReactNode
     title: string
     desc: string
+    index: number
 }
 
-function CardServico({ icon, title, desc }: CardServicoProps) {
+function CardServico({ icon, title, desc, index }: CardServicoProps) {
     return (
         <div
             tabIndex={0}
             className="border-animated rounded-xl p-1 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl focus:scale-105 focus:shadow-2xl"
+            data-aos="fade-up"
+            data-aos-delay={100 * index}
         >
             <Card className="bg-[#121212] border-none rounded-xl relative z-10 max-w-sm mx-auto">
                 <CardHeader className="flex flex-col items-center">
@@ -30,6 +35,14 @@ function CardServico({ icon, title, desc }: CardServicoProps) {
 }
 
 export default function ServicosCards() {
+    useEffect(() => {
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-in-out',
+        })
+    }, [])
+
     const cards = [
         {
             icon: <SquareStack className="w-12 h-12 text-green-500 mb-4" />,
@@ -51,7 +64,7 @@ export default function ServicosCards() {
     return (
         <section className="py-20 bg-black">
             <div className="container mx-auto px-4 text-center">
-                <div className="mb-12">
+                <div className="mb-12" data-aos="fade-up">
                     <h2 className="text-4xl font-bold mb-6 text-white">
                         Nossos Segmentos
                     </h2>
@@ -61,8 +74,14 @@ export default function ServicosCards() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {cards.map(({ icon, title, desc }) => (
-                        <CardServico key={title} icon={icon} title={title} desc={desc} />
+                    {cards.map(({ icon, title, desc }, index) => (
+                        <CardServico
+                            key={title}
+                            icon={icon}
+                            title={title}
+                            desc={desc}
+                            index={index}
+                        />
                     ))}
                 </div>
             </div>

@@ -61,7 +61,7 @@ export function About() {
                             </li>
                             <li className="flex items-center gap-2">
                                 <Check className="text-green-600" />
-                                Comprometimento com qualidade, pontualidade e preço
+                                Comprometimento com qualidade, pontualidade e preço justo
                             </li>
                         </ul>
 
