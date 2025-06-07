@@ -1,9 +1,16 @@
 'use client'
 
+import { ReactNode } from "react"
 import { Building2, SquareStack, Layers } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
-function CardServico({ icon, title, desc }) {
+interface CardServicoProps {
+    icon: ReactNode
+    title: string
+    desc: string
+}
+
+function CardServico({ icon, title, desc }: CardServicoProps) {
     return (
         <div
             tabIndex={0}
