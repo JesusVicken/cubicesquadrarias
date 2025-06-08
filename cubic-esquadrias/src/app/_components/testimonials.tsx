@@ -58,7 +58,9 @@ export default function Testimonials() {
         <section className="bg-black text-white py-12 md:py-20 relative overflow-hidden">
             <div className="container px-4 mx-auto">
                 <div className="text-center mb-8 md:mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-3 md:mb-4">Depoimentos</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-3 md:mb-4">
+                        Depoimento dos nossos clientes
+                    </h2>
                     <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-base">
                         Veja o que nossos clientes dizem sobre a experiência com nossos serviços e soluções.
                     </p>

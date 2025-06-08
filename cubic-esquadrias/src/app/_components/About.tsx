@@ -41,7 +41,7 @@ export function About() {
                         <h2 className="text-4xl font-bold text-gray-900">Sobre a Cubic Esquadrias</h2>
 
                         <p className="text-gray-700 text-justify">
-                            Com um time de profissionais altamente qualificados, desde 2017 a <strong>Cubic Esquadrias</strong> oferece ao mercado de Brasília e entorno soluções completas em esquadrias de alumínio, vidros temperados, fachadas em pele de vidro e ACM. Atuamos com excelência em Brasília e em todo o Brasil.
+                            Com um time de profissionais altamente qualificados, desde 2021 a <strong>Cubic Esquadrias</strong> oferece ao mercado de Brasília e entorno soluções completas em esquadrias de alumínio, vidros temperados, fachadas em pele de vidro e ACM. Atuamos com excelência em Brasília e em todo o Brasil.
                         </p>
                         <p className="text-gray-700 text-justify">
                             Nosso compromisso é transformar projetos em sonhos realizados, garantindo sempre alta performance e qualidade. Trabalhamos para ser referência em pontualidade, preço justo, organização e excelência.
@@ -53,7 +53,7 @@ export function About() {
                         <ul className="space-y-3">
                             <li className="flex items-center gap-2">
                                 <Check className="text-green-600" />
-                                Fundada em 2017, com atuação em Brasília e em todo o Brasil
+                                Fundada em 2021, com atuação em Brasília e em todo o Brasil
                             </li>
                             <li className="flex items-center gap-2">
                                 <Check className="text-green-600" />

@@ -1,5 +1,6 @@
 
 import { About } from "./_components/About";
+import Contact from "./_components/contact";
 import Hero from "./_components/hero";
 import Segments from "./_components/segments";
 import ServicosCards from "./_components/ServicosCards";
@@ -16,6 +17,7 @@ export default function Home() {
       <ServicosCards />
       <Segments />
       <Testimonials />
+      <Contact />
     </main>
   )
 }
