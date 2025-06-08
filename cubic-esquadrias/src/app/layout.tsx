@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/header";
 import { AosInit } from "./_components/aos-init";
+import Whatsapp from "./_components/whatsapp";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Whatsapp />
         <AosInit />
       </body>
     </html>
