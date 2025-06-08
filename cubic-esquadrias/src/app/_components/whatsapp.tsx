@@ -12,11 +12,19 @@ export default function WhatsappFloatingButton() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="fixed bottom-6 right-6 z-50 bg-green-600 hover:bg-green-700 p-4 rounded-full shadow-lg transition-colors"
             aria-label="Fale conosco no WhatsApp"
+            className="
+        fixed bottom-6 right-6 z-50 
+        bg-green-600 hover:bg-green-700 
+        p-4 rounded-full shadow-lg 
+        transition-colors
+        w-12 h-12 flex items-center justify-center
+
+        md:w-14 md:h-14 md:bottom-8 md:right-8
+      "
         >
             <svg
-                className="w-7 h-7 text-white"
+                className="w-7 h-7 md:w-8 md:h-8 text-white"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"
                 fill="currentColor"
