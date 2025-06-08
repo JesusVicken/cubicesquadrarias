@@ -38,9 +38,9 @@ export default function Header() {
                             Sobre
                         </Button>
                     </Link>
-                    <Link href="/contato">
+                    <Link href="/projetos">
                         <Button variant="ghost" className="text-base">
-                            Contato
+                            Projetos
                         </Button>
                     </Link>
                 </nav>
