@@ -59,7 +59,7 @@ const services: Service[] = [
 
 export default function Segments() {
     const [emblaRef, emblaApi] = useEmblaCarousel({
-        loop: true,
+        loop: false,
         align: 'center',
     })
 
